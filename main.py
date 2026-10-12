@@ -1,15 +1,7 @@
-from http.server import HTTPServer
-from socket import socket
-
 import config
 import functions
-import socket
 import logging
 
-s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-s.connect(("8.8.8.8", 80))
-config.HOSTNAME=s.getsockname()[0]
-s.close()
 
 logger = logging.getLogger(config.APP_NAME)
 
