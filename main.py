@@ -3,7 +3,6 @@ from socket import socket
 
 import config
 import functions
-import WebServer
 import socket
 import logging
 
@@ -15,12 +14,6 @@ s.close()
 logger = logging.getLogger(config.APP_NAME)
 
 if __name__ == '__main__':
-    http_server = HTTPServer((config.HOSTNAME, config.HOST_PORT), WebServer)
-    logger.warning("SIPAS Pan-American School")
+    logger.warning("Pan-American School\n%s" % config.APP_NAME)
     logger.warning("Client version : %s" % config.CLIENT_VERSION)
-    logger.warning("Server Starts - %s:%s" % (config.HOSTNAME, config.HOST_PORT))
-    logger.warning(functions.send_api_message({"module":"devi","action":"device_conection_notify","session_uid":config.SIPAS_SESSION,"device_ip":config.HOSTNAME}))
-    try:
-        http_server.serve_forever()
-    except KeyboardInterrupt:
-        http_server.server_close()
+    logger.warning(functions.send_api_message({"session_uid":config.SIPAS_SESSION_UID,"module": "comu", "action": "send_pending_emails", "no_ciclo": 23 }))

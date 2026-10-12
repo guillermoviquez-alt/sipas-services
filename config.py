@@ -1,7 +1,5 @@
 SIPAS_BACKEND_URL="https://sipas-backend.panam.ed.cr"
 SIPAS_FRONTEND_URL="https://sipas-frontend.panam.ed.cr"
-HOST_PORT=8000
-CLIENT_VERSION="4.0.1"
-HOSTNAME="SIPAS client"
-APP_NAME="SIPAS client"
-SIPAS_SESSION=""
+APP_NAME="SIPAS mail send service"
+CLIENT_VERSION="4.0.0"
+SIPAS_SESSION_UID="ca2346b6e32d8e4dd1e85wf6d4d853bd"
